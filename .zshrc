@@ -55,12 +55,13 @@ alias nv='nvim'
 
 # alias cat="bat"
 # alias ll="ls -l -a -o --color -h --group-directories-first"
-alias ls="exa -lh --icons"
+alias ls="exa -lh --icons --group-directories-first"
 alias lt="exa -l --icons --tree"
+
 alias evim="nvim $HOME/.config/nvim"
 alias ezsh="nvim $HOME/.zshrc"
+alias etm="nvim $HOME/.tmux.conf"
 alias pn="nvim $HOME/pnotes"
-
 
 
 

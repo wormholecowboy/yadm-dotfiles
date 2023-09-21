@@ -10,8 +10,9 @@ local opts = { silent = true }
 -- f: hop
 -- s: search files, git, string, help
 -- r: rename
--- d: diagnostic
+-- D: diagnostic
 -- q: kill cmp
+-- h: harpoon
 -- o&O: add lines
 
 keymap("", "<space>", "<nop>", opts)
@@ -30,8 +31,9 @@ keymap("n", "<leader>uv", "<cmd>edit $HOME/.config/nvim/<cr>", opts)
 keymap("n", "<leader>up", "<cmd>edit $HOME/pnotes<cr>", opts)
 keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false }<cr>", opts)
 
-keymap("n", "<leader>o", "o<Esc>", opts)
-keymap("n", "<leader>O", "O<Esc>", opts)
+keymap("n", "<leader>o", "o<Esc>k", opts)
+keymap("n", "<leader>O", "O<Esc>j", opts)
+
 
 
 -- Modes

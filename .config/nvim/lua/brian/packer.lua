@@ -22,8 +22,7 @@ return require('packer').startup(function(use)
     use { "sainnhe/everforest" }
     use { "morhetz/gruvbox" }
 
-
-
+    use { "ThePrimeagen/harpoon" }
     use { "akinsho/bufferline.nvim", tag = "*", requires =
     'nvim-tree/nvim-web-devicons' }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
