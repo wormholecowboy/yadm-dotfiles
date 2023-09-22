@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use("mbbill/undotree")
     use { "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" }
+    use("stevearc/conform.nvim")
 
     use {
         'numToStr/Comment.nvim',
