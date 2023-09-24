@@ -1,0 +1,8 @@
+exa git tmux plocate btop fzf 
+
+
+direct install
+neovim
+packer/lazy
+z
+zap
