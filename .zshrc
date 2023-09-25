@@ -63,7 +63,10 @@ alias ezsh="nvim $HOME/.zshrc"
 alias etm="nvim $HOME/.tmux.conf"
 alias pn="nvim $HOME/pnotes"
 
-
+alias ys="yadm status"
+alias yau="yadm add -u"
+alias yc="yadm commit -m"
+alias yc="yadm push -u origin master:main"
 
 
 # export less="$less -R -Q"
