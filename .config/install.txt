@@ -38,6 +38,7 @@ pip3 install black
 NPM
 npm install -g prettier
 npm install -g @fsouza/prettierd
+npm install -g sql-formatter
 
 
 
@@ -55,13 +56,13 @@ copy script into ~/z/z.sh
 
 
 STYLUA
+install pre-built bins
+https://github.com/JohnnyMorganz/StyLua/releases
 
 
 
-
-
-
-
+GITHUB
+gh auth login
 
 
 

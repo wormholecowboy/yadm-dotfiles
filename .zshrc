@@ -40,6 +40,10 @@ export NVM_DIR="$HOME/.nvm"
 . ~/z/z.sh
 
 
+# PATH
+export PATH="$PATH:/opt/stylua"
+
+
 # FZF configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
@@ -55,9 +59,9 @@ alias nv='nvim'
 
 # alias cat="bat"
 # alias ll="ls -l -a -o --color -h --group-directories-first"
-alias ls="exa -lh --icons --group-directories-first"
+alias ls="exa -lha --icons --group-directories-first"
 alias lt="exa -l --icons --tree"
-
+alias lsn="exa -lh --icons --group-directories-first"
 alias evim="nvim $HOME/.config/nvim"
 alias ezsh="nvim $HOME/.zshrc"
 alias etm="nvim $HOME/.tmux.conf"
