@@ -11,6 +11,7 @@ local opts = { silent = true }
 -- s: search files, git, string, help
 -- r: rename
 -- D: diagnostic
+-- d: debug
 -- q: kill cmp
 -- h: harpoon
 -- o&O: add lines
@@ -33,8 +34,6 @@ keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false
 
 keymap("n", "<leader>o", "o<Esc>k", opts)
 keymap("n", "<leader>O", "O<Esc>j", opts)
-
-
 
 -- Modes
 --   normal_mode = "n",
@@ -77,9 +76,6 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
-
-
-
 -- vim.keymap.set("n", "J", "mzJ`z") This keeps the cursor in the same spot for "J"
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -98,11 +94,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 -- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-
 -- make a file executable
 -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
-
 
 -- PLUGINS --
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)

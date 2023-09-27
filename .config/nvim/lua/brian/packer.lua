@@ -16,18 +16,25 @@ return require("packer").startup(function(use)
     -- COLORS --
     use("martinsione/darkplus.nvim")
     use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
-    use({ "dracula/vim" })
-    use({ "lisposter/vim-blackboard" })
-    use({ "kyazdani42/blue-moon" })
-    use({ "lifepillar/vim-solarized8" })
-    use({ "sainnhe/everforest" })
-    use({ "morhetz/gruvbox" })
+    use("dracula/vim")
+    use("lisposter/vim-blackboard")
+    use("kyazdani42/blue-moon")
+    use("lifepillar/vim-solarized8")
+    use("sainnhe/everforest")
+    use("morhetz/gruvbox")
+    use("talha-akram/noctis.nvim")
 
+    use({
+        "norcalli/nvim-colorizer.lua",
+        config = function()
+            require("colorizer").setup()
+        end,
+    })
     use({
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
     })
-    use({ "ThePrimeagen/harpoon" })
+    use("ThePrimeagen/harpoon")
     use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
     use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
     use("mbbill/undotree")

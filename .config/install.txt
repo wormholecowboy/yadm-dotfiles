@@ -1,5 +1,6 @@
-exa git tmux btop fzf yadm npm neofetch shellcheck gh
+exa git tmux btop fzf yadm npm neofetch shellcheck gh ripgrep
 plocate
+fd-find OR fd
 
 
 
@@ -32,6 +33,7 @@ PYTHON
 sudo apt install python3
 sudo apt install python3-pip
 pip3 install black
+pip3 install pyright
 
 
 
@@ -39,6 +41,8 @@ NPM
 npm install -g prettier
 npm install -g @fsouza/prettierd
 npm install -g sql-formatter
+npm install -g typescript-language-server typescript
+?npm install -g eslint
 
 
 
