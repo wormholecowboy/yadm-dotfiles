@@ -15,38 +15,66 @@ return require("packer").startup(function(use)
     --
     -- COLORS --
     use("martinsione/darkplus.nvim")
-    use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
+    use("folke/tokyonight.nvim")
     use("dracula/vim")
-    use("lisposter/vim-blackboard")
-    use("kyazdani42/blue-moon")
     use("lifepillar/vim-solarized8")
-    use("sainnhe/everforest")
+    use("neanias/everforest-nvim")
     use("morhetz/gruvbox")
+    use({ "rose-pine/neovim", as = "rose-pine" })
+    use("EdenEast/nightfox.nvim")
+    use("kvrohit/mellow.nvim")
     use("talha-akram/noctis.nvim")
-
     use({
         "norcalli/nvim-colorizer.lua",
         config = function()
             require("colorizer").setup()
         end,
     })
+
+    -- EDITING
     use({
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
     })
-    use("ThePrimeagen/harpoon")
-    use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
-    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-    use("mbbill/undotree")
-    use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
     use("stevearc/conform.nvim")
-
     use({
         "numToStr/Comment.nvim",
         config = function()
             require("Comment").setup()
         end,
     })
+    use("tpope/vim-surround")
+    use("windwp/nvim-ts-autotag")
+    use({
+        "windwp/nvim-autopairs",
+        config = function()
+            require("nvim-autopairs").setup({})
+        end,
+    })
+    use("rafamadriz/friendly-snippets")
+    use({
+        "L3MON4D3/LuaSnip",
+        dependencies = { "rafamadriz/friendly-snippets" },
+    })
+
+    -- ENVIRON
+    use({
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    })
+    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+    use("mbbill/undotree")
+    use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
+    use("folke/zen-mode.nvim")
+    use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
+    use({
+        "nvim-lualine/lualine.nvim",
+        requires = { "nvim-tree/nvim-web-devicons", opt = true },
+    })
+    use("tpope/vim-fugitive")
+
+    -- NAV
+    use("ThePrimeagen/harpoon")
     use({
         "phaazon/hop.nvim",
         branch = "v2", -- optional but strongly recommended
@@ -55,30 +83,9 @@ return require("packer").startup(function(use)
             require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
         end,
     })
-    use("tpope/vim-fugitive")
-    use("tpope/vim-surround")
-    use({
-        "folke/trouble.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-    })
-    use("windwp/nvim-ts-autotag")
-    use({
-        "windwp/nvim-autopairs",
-        config = function()
-            require("nvim-autopairs").setup({})
-        end,
-    })
     use("karb94/neoscroll.nvim")
-    use("folke/zen-mode.nvim")
-    use({
-        "nvim-lualine/lualine.nvim",
-        requires = { "nvim-tree/nvim-web-devicons", opt = true },
-    })
-    use("rafamadriz/friendly-snippets")
-    use({
-        "L3MON4D3/LuaSnip",
-        dependencies = { "rafamadriz/friendly-snippets" },
-    })
+
+    -- LSP & CMP
     use("hrsh7th/cmp-path")
     use("hrsh7th/cmp-buffer")
     use({
@@ -86,14 +93,14 @@ return require("packer").startup(function(use)
         branch = "v2.x",
         requires = {
             -- LSP Support
-            { "neovim/nvim-lspconfig" },    -- Required
-            { "williamboman/mason.nvim" },  -- Optional
+            { "neovim/nvim-lspconfig" },             -- Required
+            { "williamboman/mason.nvim" },           -- Optional
             { "williamboman/mason-lspconfig.nvim" }, -- Optional
 
             -- Autocompletion
-            { "hrsh7th/nvim-cmp" }, -- Required
+            { "hrsh7th/nvim-cmp" },     -- Required
             { "hrsh7th/cmp-nvim-lsp" }, -- Required
-            { "L3MON4D3/LuaSnip" }, -- Required
+            { "L3MON4D3/LuaSnip" },     -- Required
             { "saadparwaiz1/cmp_luasnip" },
         },
     })
