@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+
 # Editor
 export EDITOR=nvim
 
@@ -15,13 +18,10 @@ bindkey -e
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
-# plug "zap-zsh/zap-prompt"
-# plug "zettlrobert/simple-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/nvm"
 plug "romkatv/powerlevel10k"
-# plug "zap-zsh/fzf"
-# plug "wintermi/zsh-lsd"
+plug "zap-zsh/fzf"
 
 
 # Load and initialise completion system
@@ -36,12 +36,23 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# SET OPTIONS
+setopt auto_cd
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushdminus
+
+
 # RUN THESE
 . ~/z/z.sh
+. ~/scripts/dirchanger.sh
+
 
 
 # PATH
 export PATH="$PATH:/opt/stylua"
+export PATH="$PATH:/usr/local/lf"
+export PATH="$PATH:/usr/local/go/bin"
 
 
 # FZF configuration
@@ -71,6 +82,11 @@ alias ys="yadm status"
 alias ya="yadm add -u"
 alias yc="yadm commit -m"
 alias yp="yadm push -u origin main:main"
+
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
 
 
 # export less="$less -R -Q"
