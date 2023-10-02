@@ -3,15 +3,15 @@ if not status_ok then
     return
 end
 
-local actions = require "telescope.actions"
-local builtin = require "telescope.builtin"
+local actions = require("telescope.actions")
+local builtin = require("telescope.builtin")
 
-vim.keymap.set('n', '<leader>sf', builtin.find_files, {})
-vim.keymap.set('n', '<leader>sg', builtin.git_files, {})
-vim.keymap.set('n', '<leader>ss', function()
+vim.keymap.set("n", "<leader>sf", builtin.find_files, {})
+vim.keymap.set("n", "<leader>sg", builtin.git_files, {})
+vim.keymap.set("n", "<leader>ss", function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
-vim.keymap.set('n', '<leader>sh', builtin.help_tags, {})
+vim.keymap.set("n", "<leader>sh", builtin.help_tags, {})
 
 -- telescope.setup {
 --   defaults = {

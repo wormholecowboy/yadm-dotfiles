@@ -22,7 +22,7 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/nvm"
 plug "romkatv/powerlevel10k"
 plug "zap-zsh/fzf"
-
+plug "Aloxaf/fzf-tab"
 
 # Load and initialise completion system
 autoload -Uz compinit
