@@ -88,5 +88,8 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
+alias specs="inxi -Fxxxc0z"
+
+
 
 # export less="$less -R -Q"

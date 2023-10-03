@@ -1,8 +1,16 @@
 local keymap = vim.keymap.set
 local opts = { silent = true }
-
 -- my current leader remaps legend
--- g: lsp & git
+-- g: lsp
+--      gd: def
+--      gD: declaration
+--      gi: implemntation
+--      go: def of type
+--      gr: ref
+--      gs: signature
+--      gl: show diagnostic
+-- gb and gc : comment.nvim
+-- gg: fugitive
 -- u: user
 -- U: Undotree
 -- w: write
@@ -35,6 +43,7 @@ keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false
 keymap("n", "<leader>o", "o<Esc>k", opts)
 keymap("n", "<leader>O", "O<Esc>j", opts)
 
+vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
