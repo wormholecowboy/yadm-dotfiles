@@ -64,15 +64,17 @@ export FZF_DEFAULT_OPS="--extended"
 alias ga="git add ."
 alias gc="git commit"
 alias gp="git push"
+alias gs="git status"
+alias gl="git log"
 
 alias nrd="npm run dev"
 alias nv='nvim'
 
 # alias cat="bat"
-# alias ll="ls -l -a -o --color -h --group-directories-first"
 alias ls="exa -lha --icons --group-directories-first"
 alias lt="exa -l --icons --tree"
 alias lsn="exa -lh --icons --group-directories-first"
+
 alias evim="nvim $HOME/.config/nvim"
 alias ezsh="nvim $HOME/.zshrc"
 alias etm="nvim $HOME/.tmux.conf"
