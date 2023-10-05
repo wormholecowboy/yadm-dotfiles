@@ -1,6 +1,5 @@
 let a = [];
 
-a.map();
 // TODO: whatever
 // WARN: thing
 //

@@ -91,7 +91,7 @@ alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
 alias specs="inxi -Fxxxc0z"
-
+alias grep="grep --color=auto"
 
 
 # export less="$less -R -Q"

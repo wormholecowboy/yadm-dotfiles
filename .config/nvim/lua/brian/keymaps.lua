@@ -1,6 +1,6 @@
 local keymap = vim.keymap.set
 local opts = { silent = true }
--- my current leader remaps legend
+
 -- g: lsp
 --      gd: def
 --      gD: declaration
@@ -10,7 +10,13 @@ local opts = { silent = true }
 --      gs: signature
 --      gl: show diagnostic
 -- gb and gc : comment.nvim
+--
+-- my current leader remaps legend
 -- gg: fugitive
+--      ,.: diffget
+--      p: push
+--      m: add all modified -u
+--      a: add all
 -- u: user
 -- U: Undotree
 -- w: write
@@ -29,7 +35,7 @@ vim.g.mapleader = " "
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader>c", ":bd<cr>", opts)
 keymap("n", "Q", "<nop>")
-keymap("x", "p", [["_dP]])                 -- better paste
+keymap("x", "p", [["_dP]]) -- better paste
 keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
 
 -- replace the word you are hovered on
@@ -43,7 +49,9 @@ keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false
 keymap("n", "<leader>o", "o<Esc>k", opts)
 keymap("n", "<leader>O", "O<Esc>j", opts)
 
-vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
+vim.keymap.set("n", "<leader>vca", function()
+	vim.lsp.buf.code_action()
+end, opts)
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
