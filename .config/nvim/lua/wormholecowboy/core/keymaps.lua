@@ -1,6 +1,8 @@
 local keymap = vim.keymap.set
 local opts = { silent = true }
 
+vim.g.mapleader = " "
+
 -- g: lsp
 --      gd: def
 --      gD: declaration
@@ -30,12 +32,10 @@ local opts = { silent = true }
 -- h: harpoon
 -- o&O: add lines
 
-keymap("", "<space>", "<nop>", opts)
-vim.g.mapleader = " "
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader>c", ":bd<cr>", opts)
 keymap("n", "Q", "<nop>")
-keymap("x", "p", [["_dP]]) -- better paste
+keymap("x", "p", [["_dP]])                 -- better paste
 keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
 
 -- replace the word you are hovered on
@@ -50,7 +50,7 @@ keymap("n", "<leader>o", "o<Esc>k", opts)
 keymap("n", "<leader>O", "O<Esc>j", opts)
 
 vim.keymap.set("n", "<leader>vca", function()
-	vim.lsp.buf.code_action()
+    vim.lsp.buf.code_action()
 end, opts)
 -- Modes
 --   normal_mode = "n",

@@ -1,3 +1,6 @@
+return {
+    ("folke/zen-mode.nvim")
+}
 --[[ require("zen-mode").toggle(
     {
         window = {
