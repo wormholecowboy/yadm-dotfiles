@@ -8,13 +8,13 @@ import { array } from "prop-types";
 // import { List } from '@mui/material';
 import React, { useState } from "react";
 
-const b = [1, 2, 3, 4, 5];
+const bsomevar = [1, 2, 3, 4, 5];
 
-b[2000] = "whatever";
-b[3000] = "whatever";
-b[4000] = "whatever";
-b[5000] = "whatever";
-b[6000] = "whatever";
+bsomevar[2000] = "whatever";
+bsomevar[3000] = "whatever";
+bsomevar[4000] = "whatever";
+bsomevar[5000] = "whatever";
+bsomevar[6000] = "whatever";
 
 function longFunction() {
   /* This may be the
