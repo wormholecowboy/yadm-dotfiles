@@ -10,6 +10,7 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Editor
 export EDITOR=nvim
+export XDG_CONFIG_HOME=~/.config
 
 # Key Bindings
 bindkey -e
@@ -64,8 +65,10 @@ export FZF_DEFAULT_OPS="--extended"
 alias ga="git add ."
 alias gc="git commit"
 alias gp="git push"
-alias gs="git status"
+alias gs="git status -s"
 alias gl="git log"
+alias glg="git log --oneline --decorate --graph --all"
+alias glo="git log --oneline"
 
 alias nrd="npm run dev"
 alias nv='nvim'
@@ -83,8 +86,8 @@ alias pn="nvim $HOME/pnotes"
 
 alias ys="yadm status"
 alias ya="yadm add -u"
-alias yc="yadm commit -m"
-alias yp="yadm push -u origin main:main"
+alias yc="yadm commit"
+alias yp="yadm push"
 
 alias -g ...='../..'
 alias -g ....='../../..'
