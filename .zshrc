@@ -75,7 +75,7 @@ alias nv='nvim'
 
 # alias cat="bat"
 alias ls="exa -lha --icons --group-directories-first"
-alias ll="exa -lha --group-directories-first | less"
+alias ll="exa -lha --color=always --group-directories-first | less -r"
 alias lt="exa -l --icons --tree"
 alias lsn="exa -lh --icons --group-directories-first"
 
