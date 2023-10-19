@@ -16,6 +16,7 @@ vim.g.mapleader = " "
 -- my current leader remaps legend
 -- gg: fugitive
 --      ,.: diffget
+--      v: Gvdiffsplit!
 --      p: push
 --      m: add all modified -u
 --      a: add all
@@ -38,7 +39,6 @@ keymap("n", "Q", "<nop>")
 keymap("x", "p", [["_dP]]) -- better paste
 keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
 
--- replace the word you are hovered on
 keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("i", "kj", "<ESC>", opts)
 keymap("n", "<leader>uz", "<cmd>edit $HOME/.zshrc<cr>", opts)
