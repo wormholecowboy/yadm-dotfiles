@@ -37,6 +37,9 @@ keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader>c", ":bd<cr>", opts)
 keymap("n", "Q", "<nop>")
 keymap("x", "p", [["_dP]]) -- better paste
+keymap("x", "r", [["_r]])
+keymap("x", "x", [["_x]])
+keymap("x", "s", [["_s]])
 keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
 
 keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -50,7 +53,7 @@ keymap("n", "<leader>o", "o<Esc>k", opts)
 keymap("n", "<leader>O", "O<Esc>j", opts)
 
 vim.keymap.set("n", "<leader>vca", function()
-	vim.lsp.buf.code_action()
+    vim.lsp.buf.code_action()
 end, opts)
 -- Modes
 --   normal_mode = "n",
