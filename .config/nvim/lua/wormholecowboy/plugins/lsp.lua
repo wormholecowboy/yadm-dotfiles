@@ -77,10 +77,20 @@ return {
 				{ name = "path" },
 				{ name = "buffer", keyword_length = 3 },
 			}),
+			completion = {
+				completeopt = "menu,menuone, noinsert",
+			},
 			mapping = cmp.mapping.preset.insert({
-				["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-				-- ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-				-- ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+				["<C-l>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+				["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+				["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+				["<C-k>"] = cmp.mapping.scroll_docs(-4),
+				["<C-j>"] = cmp.mapping.scroll_docs(4),
+				["<C-Space>"] = cmp.mapping.complete(),
+				["<C-e>"] = cmp.mapping({
+					i = cmp.mapping.abort(),
+					c = cmp.mapping.close(),
+				}),
 				["<Tab>"] = cmp.mapping(function(fallback) -- SuperTAB stuff
 					if cmp.visible() then
 						cmp.select_next_item()
