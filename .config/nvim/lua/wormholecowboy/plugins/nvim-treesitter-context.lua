@@ -21,7 +21,8 @@ return {
 	vim.keymap.set("n", "[c", function()
 		require("treesitter-context").go_to_context()
 	end, { silent = true }),
-	vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey"),
-	vim.cmd("hi TreesitterContextLineNumber gui=underline guisp=Grey"),
-	vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { link = "Search" }),
+	-- vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey"),
+	-- vim.cmd("hi TreesitterContextLineNumber gui=underline guisp=Grey"),
+	vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { link = "Visual" }),
+	vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Visual" }),
 }
