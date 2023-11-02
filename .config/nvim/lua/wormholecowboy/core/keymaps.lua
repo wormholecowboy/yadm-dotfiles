@@ -1,6 +1,9 @@
 local keymap = vim.keymap.set
 local opts = { silent = true }
 
+-- add function: kill cmp, set wrap with not word breakage, turn off line hl, turn off line numbers, turn off line numbers
+-- or maybe an autocommand that hooks into when a txt file or md file is opened
+
 vim.g.mapleader = " "
 
 -- g: lsp
