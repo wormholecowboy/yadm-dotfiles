@@ -7,6 +7,7 @@ return {
 				lua = { "stylua" },
 				python = { "black" },
 				javascript = { { "prettierd", "prettier" } },
+				typescript = { { "prettierd", "prettier" } },
 				sql = { "sql_formatter" },
 			},
 			format_on_save = {
