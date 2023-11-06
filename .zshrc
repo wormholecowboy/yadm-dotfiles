@@ -49,7 +49,6 @@ setopt pushdminus
 . ~/scripts/dirchanger.sh
 
 
-
 # PATH
 export PATH="$PATH:/opt/stylua"
 export PATH="$PATH:/usr/local/lf"
