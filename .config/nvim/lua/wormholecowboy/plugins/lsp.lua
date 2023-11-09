@@ -53,6 +53,12 @@ return {
 			"lua_ls",
 		})
 
+		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+		for type, icon in pairs(signs) do
+			local hl = "DiagnosticSign" .. type
+			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+		end
+
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		local check_backspace = function() -- from chris@machine (needed for supertab)
