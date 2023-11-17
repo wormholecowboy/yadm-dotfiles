@@ -18,6 +18,7 @@ return {
 			builtin.grep_string({ search = vim.fn.input("Grep > ") })
 		end)
 		vim.keymap.set("n", "<leader>sh", builtin.help_tags, {})
+		vim.keymap.set("n", "<leader>sc", builtin.colorscheme, {})
 
 		telescope.setup({
 			defaults = {
