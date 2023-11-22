@@ -61,7 +61,7 @@ export FZF_DEFAULT_OPS="--extended"
 
 
 # ALIAS
-alias ga="git add ."
+alias ga="git add -A"
 alias gc="git commit"
 alias gp="git push"
 alias gs="git status -s"
