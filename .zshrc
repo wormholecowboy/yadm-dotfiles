@@ -72,6 +72,8 @@ alias glo="git log --oneline"
 alias nrd="npm run dev"
 alias nv='nvim'
 
+alias py='python3'
+
 # alias cat="bat"
 alias ls="exa -lha --icons --group-directories-first"
 alias ll="exa -lha --color=always --group-directories-first | less -r"
