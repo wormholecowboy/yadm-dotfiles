@@ -15,6 +15,6 @@ return {
 			-- 	lsp_fallback = true,
 			-- },
 		})
-          vim.keymap.set("n", "<leader>uf", "<cmd>lua require('conform').format()", {})
+          vim.keymap.set("n", "<leader>uf", "<cmd>lua require('conform').format()<cr>", {})
 	end,
 }
