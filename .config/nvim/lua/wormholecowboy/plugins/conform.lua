@@ -10,11 +10,11 @@ return {
 				typescript = { { "prettierd", "prettier" } },
 				sql = { "sql_formatter" },
 			},
-			format_on_save = {
-				-- These options will be passed to conform.format()
-				timeout_ms = 500,
-				lsp_fallback = true,
-			},
+			-- format_on_save = {
+			-- 	timeout_ms = 500,
+			-- 	lsp_fallback = true,
+			-- },
 		})
+          vim.keymap.set("n", "<leader>uf", "<cmd>lua require('conform').format()", {})
 	end,
 }

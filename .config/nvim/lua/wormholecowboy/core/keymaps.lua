@@ -24,6 +24,9 @@ vim.g.mapleader = " "
 --      m: add all modified -u
 --      a: add all
 -- u: user
+--      z: edit zsh
+--      v: edit vim config
+--      p: prog notes
 -- U: Undotree
 -- w: write
 -- c: close buffer
@@ -34,7 +37,9 @@ vim.g.mapleader = " "
 -- d: debug
 -- q: kill cmp
 -- h: harpoon
+-- z: zen mode
 -- o&O: add lines
+-- vca: ?
 
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader>c", ":bd<cr>", opts)
@@ -105,9 +110,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv") -- These 2 keep your cursor in the middle on search
 vim.keymap.set("n", "N", "Nzzzv")
 
--- greatest remap ever - this deletes to the void register, so it doesn't copy the delete into your current register
--- vim.keymap.set("x", "<leader>p", [["_dP]])
-
 -- this is for switching projects with tmux?
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
@@ -119,7 +121,3 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- make a file executable
 -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
--- PLUGINS --
--- Git
--- keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
