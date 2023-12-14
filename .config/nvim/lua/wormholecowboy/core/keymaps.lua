@@ -48,6 +48,7 @@ keymap("x", "p", [["_dP]]) -- better paste
 keymap("x", "r", [["_r]])
 keymap("x", "x", [["_x]])
 keymap("x", "s", [["_s]])
+keymap("x", "c", [["_c]])
 keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
 
 keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -109,6 +110,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv") -- These 2 keep your cursor in the middle on search
 vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "*", "*zz")
+vim.keymap.set("n", "#", "#zz")
 
 -- this is for switching projects with tmux?
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
