@@ -16,7 +16,7 @@ vim.g.mapleader = " "
 --      gl: show diagnostic
 -- gb and gc : comment.nvim
 --
--- my current leader remaps legend
+--  LEADER: my current leader remaps legend
 -- gg: fugitive
 --      ,.: diffget
 --      v: Gvdiffsplit!
@@ -27,6 +27,7 @@ vim.g.mapleader = " "
 --      z: edit zsh
 --      v: edit vim config
 --      p: prog notes
+--      c: code actions
 -- U: Undotree
 -- w: write
 -- c: close buffer
@@ -36,27 +37,33 @@ vim.g.mapleader = " "
 -- D: diagnostic
 -- d: debug
 -- q: kill cmp
--- h: harpoon
+-- h and t: git hunks
+--      check git signs for keymaps
 -- z: zen mode
+-- a: copy all
 -- o&O: add lines
 -- vca: ?
 
-keymap("n", "<leader>w", ":w<cr>", opts)
-keymap("n", "<leader>c", ":bd<cr>", opts)
+keymap("i", "kj", "<ESC>", opts)
+vim.api.nvim_set_keymap("n", "QQ", ":q!<enter>", {noremap=false})
+
 keymap("n", "Q", "<nop>")
 keymap("x", "p", [["_dP]]) -- better paste
-keymap("x", "r", [["_r]])
-keymap("x", "x", [["_x]])
-keymap("x", "s", [["_s]])
-keymap("x", "c", [["_c]])
-keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
+keymap("n", "r", [["_r]])
+keymap("n", "x", [["_x]])
+keymap("n", "s", [["_s]])
+keymap("n", "c", [["_c]])
 
-keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-keymap("i", "kj", "<ESC>", opts)
 keymap("n", "<leader>uz", "<cmd>edit $HOME/.zshrc<cr>", opts)
 keymap("n", "<leader>uv", "<cmd>edit $HOME/.config/nvim/<cr>", opts)
 keymap("n", "<leader>up", "<cmd>edit $HOME/pnotes<cr>", opts)
+keymap("n", "<leader>uc", ":lua vim.lsp.buf.code_action()<CR>", opts) --select all
+
+keymap("n", "<leader>w", ":w<cr>", opts)
+keymap("n", "<leader>c", ":bd<cr>", opts)
+keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
 keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false }<cr>", opts)
+keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 keymap("n", "<leader>o", "o<Esc>k", opts)
 keymap("n", "<leader>O", "O<Esc>j", opts)
