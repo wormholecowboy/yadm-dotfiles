@@ -1,6 +1,6 @@
 [credential "https://github.com"]
 	helper = 
-	helper = !/usr/bin/gh auth git-credential
+	helper = !/opt/homebrew/bin/gh auth git-credential
 [user]
 	email = wormholecowboy@gmail.com
 	name = wormholecowboy
@@ -12,3 +12,6 @@
 	tool = vimdiff
 [merge]
 	tool = vimdiff
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
