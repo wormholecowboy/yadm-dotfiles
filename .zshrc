@@ -44,10 +44,10 @@ setopt pushd_ignore_dups
 setopt pushdminus
 
 
-# RUN THESE
+# SOURCE THESE
 . ~/z/z.sh
 . ~/scripts/dirchanger.sh
-
+. ~/.config/lf/lfcd.sh
 
 # PATH
 export PATH="$PATH:/opt/stylua"
@@ -74,6 +74,8 @@ alias nrd="npm run dev"
 alias nv='nvim'
 
 alias py='python3'
+
+alias lf='lfcd'
 
 # alias cat="bat"
 alias ls="exa -lha --icons --group-directories-first"

@@ -1,10 +1,19 @@
-
 # Basic Settings
 set hidden true
 set ignorecase true
 set icons true
+set relativenumber
+set drawbox
 
 # Custom Functions
+
+cmd move-parent &{{
+    dironly="setlocal '$(dirname "$PWD")' dironly"
+    lf -remote "send $id :updir; $dironly true; $1; $dironly false; open"
+}}
+map J move-parent down
+map K move-parent up
+
 cmd mkdir ${{
   printf "Directory Name: "
   read ans
@@ -14,11 +23,8 @@ cmd mkdir ${{
 cmd mkfile ${{
   printf "File Name: "
   read ans
-  $EDITOR $ans
-}}
-
-cmd setwallpaper ${{
-    setwallpaper "$f"
+  touch $ans
+  # $EDITOR $ans
 }}
 
 # Archive bindings
@@ -32,51 +38,53 @@ cmd unarchive ${{
   esac
 }}
 
-# Trash bindings
-cmd trash ${{
-  files=$(printf "$fx" | tr '\n' ';')
-  while [ "$files" ]; do
-    file=${files%%;*}
-
-    trash-put "$(basename "$file")"
-    if [ "$files" = "$file" ]; then
-      files=''
-    else
-      files="${files#*;}"
-    fi
-  done
+Z
+cmd z-jump ${{
+  # ZLUA_SCRIPT="~/z/z.lua"  # Usually unnecessary
+  lf -remote "send ${id} cd \"$($ZLUA_SCRIPT -e $@ | sed 's/\\/\\\\/g;s/"/\\"/g')\""
 }}
 
-cmd restore_trash ${{
-  trash-restore
-}}
+map Z push :z-jump<space>-I<space>
+map zb push :z-jump<space>-b<space>
+map zz push :z-jump<space>
+
+
 
 # Bindings
 map d
 map m
 
-map c $vscodium "$f"
-
-map au unarchive
-map ae $wine "$f"
-
-# Basic Functions
 map . set hidden!
-map dd trash
-map dr restore_trash
 map p paste
+map ddd delete
+map a select-all
 map x cut
 map y copy
-map <enter> open
+map C clear
 map R reload
+map <enter> open
 map mf mkfile
 map md mkdir
-map bg setwallpaper
-map C clear
+map au unarchive
+map af select-files
+map ad select-dirs
+
 
 # Movement
-map gD cd ~/documents
-map gd cd ~/downloads
+map gd cd ~/Desktop
+map gD cd ~/Dropbox
 map gc cd ~/.config
-map gs cd ~/.local/bin
-map gt cd ~/.local/share/Trash/files
+map gm cd ~/myc
+map gb cd /usr/local/bin
+map gt cd ~/.Trash
+
+
+
+
+
+
+
+
+
+
+
