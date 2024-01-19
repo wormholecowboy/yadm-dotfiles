@@ -71,12 +71,13 @@ map ad select-dirs
 
 
 # Movement
-map gd cd ~/Desktop
-map gD cd ~/Dropbox
+map gdt cd ~/Desktop
+map gdb cd ~/Dropbox
 map gc cd ~/.config
 map gm cd ~/myc
 map gb cd /usr/local/bin
-map gt cd ~/.Trash
+map gtr cd ~/.Trash
+map gte cd ~/temp
 
 
 
