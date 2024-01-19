@@ -40,10 +40,10 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.expandtab = true -- convert tabs to spaces
-vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
-vim.opt.tabstop = 4 -- insert 4 spaces for a tab
-vim.opt.softtabstop = 4
-vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
+vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
+vim.opt.tabstop = 2 -- insert spaces for a tab
+vim.opt.softtabstop = 2
+vim.opt.numberwidth = 2 -- set number column width to 2 {default 4}
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.signcolumn = "yes"
