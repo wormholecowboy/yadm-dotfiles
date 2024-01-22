@@ -28,7 +28,9 @@ return {
 		require("nvim-tree").setup({
 			on_attach = my_on_attach,
 			view = {
-				width = 30,
+				width = 50,
+        number = true,
+        relativenumber = true,
 			},
 			filters = {
 				dotfiles = true,
