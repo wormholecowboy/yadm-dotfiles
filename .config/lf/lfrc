@@ -49,6 +49,12 @@ map zb push :z-jump<space>-b<space>
 map zz push :z-jump<space>
 
 
+# Windows open
+cmd wopen ${{
+  explorer.exe %f%
+}} 
+map w wopen
+
 
 # Bindings
 map d
@@ -71,14 +77,17 @@ map ad select-dirs
 
 
 # Movement
-map gdt cd ~/Desktop
-map gdb cd ~/Dropbox
-map gc cd ~/.config
-map gm cd ~/myc
 map gb cd /usr/local/bin
-map gtr cd ~/.Trash
+map gc cd ~/.config
+map gdb cd ~/Dropbox
+map gdt cd ~/Desktop
+map gdl cd ~/Downloads
+map gm cd ~/myc
+map gpn cd ~/pnotes
 map gte cd ~/temp
-
+map gtr cd ~/.Trash
+map gwdl cd /mnt/c/Users/brian.gildea/Downloads
+map gwdt cd /mnt/c/Users/brian.gildea/OneDrive - LeadVenture/Desktop
 
 
 

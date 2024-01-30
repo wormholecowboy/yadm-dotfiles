@@ -88,6 +88,8 @@ alias evim="nvim $HOME/.config/nvim"
 alias ezsh="nvim $HOME/.zshrc"
 alias etm="nvim $HOME/.tmux.conf"
 alias pn="nvim $HOME/pnotes"
+alias et="nvim $HOME/temp"
+alias eb="nvim $HOME/temp/blank.txt"
 
 alias ys="yadm status"
 alias ya="yadm add -u"
