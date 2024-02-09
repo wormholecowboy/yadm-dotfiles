@@ -14,38 +14,42 @@ vim.g.mapleader = " "
 --      gr: ref
 --      gs: signature
 --      gl: show diagnostic
--- gb and gc : comment.nvim
+--      gp: select last paste
+--      gb and gc : comment.nvim
 --
 --  LEADER: my current leader remaps legend
+-- o&O: add lines
+-- a: copy all
+-- c: close buffer
+-- d: debug
+-- D: diagnostic
+-- f: hop
 -- gg: fugitive
 --      ,.: diffget
---      v: Gvdiffsplit!
---      p: push
---      m: add all modified -u
 --      a: add all
--- u: user
---      z: edit zsh
---      v: edit vim config
---      p: prog notes
---      c: code actions
--- U: Undotree
--- w: write
--- c: close buffer
--- f: hop
--- s: search files, git, string, help
--- r: rename
--- D: diagnostic
--- d: debug
--- q: kill cmp
+--      m: add all modified -u
+--      p: push
+--      v: Gvdiffsplit!
 -- h and t: git hunks
 --      check git signs for keymaps
+-- q: kill cmp
+-- r: rename
+-- s: search files, git, string, help
+-- t: git hunks?
+-- u: user
+--      c: code actions
+--      f: format
+--      n: notes
+--      p: prog notes
+--      v: edit vim config
+--      w: format wsl paste
+--      z: edit zsh
+-- U: Undotree
+-- w: write
 -- z: zen mode
--- a: copy all
--- o&O: add lines
--- vca: ?
 
 keymap("i", "kj", "<ESC>", opts)
-vim.api.nvim_set_keymap("n", "QQ", ":q!<enter>", {noremap=false})
+vim.api.nvim_set_keymap("n", "QQ", ":q!<enter>", { noremap = false })
 
 keymap("n", "Q", "<nop>")
 keymap("x", "p", [["_dP]]) -- better paste
@@ -54,23 +58,26 @@ keymap("n", "x", [["_x]])
 keymap("n", "s", [["_s]])
 keymap("n", "c", [["_c]])
 
+function removeReturnCharacters()
+	vim.cmd("%s/\r$//")
+end
+
 keymap("n", "<leader>uz", "<cmd>edit $HOME/.zshrc<cr>", opts)
 keymap("n", "<leader>uv", "<cmd>edit $HOME/.config/nvim/<cr>", opts)
 keymap("n", "<leader>up", "<cmd>edit $HOME/pnotes<cr>", opts)
 keymap("n", "<leader>uc", ":lua vim.lsp.buf.code_action()<CR>", opts) --select all
+keymap("n", "<leader>uw", "`[v`]:lua removeReturnCharacters()<cr>", opts)
 
 keymap("n", "<leader>w", ":w<cr>", opts)
 keymap("n", "<leader>c", ":bd<cr>", opts)
 keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
+keymap("n", "gp", "`[v`]", opts)
 keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false }<cr>", opts)
 keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 keymap("n", "<leader>o", "o<Esc>k", opts)
 keymap("n", "<leader>O", "O<Esc>j", opts)
 
-vim.keymap.set("n", "<leader>vca", function()
-    vim.lsp.buf.code_action()
-end, opts)
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",

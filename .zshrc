@@ -1,11 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 
 # Editor
@@ -21,7 +13,6 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/nvm"
-plug "romkatv/powerlevel10k"
 plug "zap-zsh/fzf"
 plug "Aloxaf/fzf-tab"
 
@@ -45,10 +36,10 @@ setopt pushdminus
 
 
 # SOURCE THESE
-. ~/z/z.sh
 . ~/scripts/dirchanger.sh
 . ~/.config/lf/lfcd.sh
-
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
 # PATH
 export PATH="$PATH:/opt/stylua"
 export PATH="$PATH:/usr/local/lf"
@@ -64,6 +55,7 @@ export FZF_DEFAULT_OPS="--extended"
 alias ga="git add -A"
 alias gb="git branch -a"
 alias gc="git commit"
+alias gco="git checkout"
 alias gp="git push"
 alias gs="git status -s"
 alias gst="git status"
@@ -75,10 +67,9 @@ alias nrd="npm run dev"
 alias nv='nvim'
 
 alias py='python3'
-
 alias lf='lfcd'
+alias cat="batcat"
 
-# alias cat="bat"
 alias ls="exa -lha --icons --group-directories-first"
 alias ll="exa -lha --color=always --group-directories-first | less -r"
 alias lt="exa -l --icons --tree"
@@ -104,5 +95,17 @@ alias -g ......='../../../../..'
 alias specs="inxi -Fxxxc0z"
 alias grep="grep --color=auto"
 
+alias s2l="saml2aws login"
+alias s2s="saml2aws script"
+alias tfa="terraform apply"
 
-# export less="$less -R -Q"
+
+
+
+
+
+
+
+
+
+

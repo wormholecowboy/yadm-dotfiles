@@ -1,4 +1,4 @@
-exa git tmux btop fzf yadm npm neofetch shellcheck gh ripgrep lf
+exa git tmux btop fzf yadm npm neofetch shellcheck gh ripgrep lf zoxide
 apt plocate
 fd-find OR fd
 

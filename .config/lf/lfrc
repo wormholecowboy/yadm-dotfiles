@@ -38,15 +38,18 @@ cmd unarchive ${{
   esac
 }}
 
-Z
-cmd z-jump ${{
-  # ZLUA_SCRIPT="~/z/z.lua"  # Usually unnecessary
-  lf -remote "send ${id} cd \"$($ZLUA_SCRIPT -e $@ | sed 's/\\/\\\\/g;s/"/\\"/g')\""
-}}
+# Zoxide
+cmd z %{{
+  result="$(zoxide query --exclude $PWD $@ | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    lf -remote "send $id cd \"$result\""
+    }}
 
-map Z push :z-jump<space>-I<space>
-map zb push :z-jump<space>-b<space>
-map zz push :z-jump<space>
+cmd zi ${{
+  result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    lf -remote "send $id cd \"$result\""
+    }}
+
+map zi zi
 
 
 # Windows open
@@ -68,9 +71,11 @@ map x cut
 map y copy
 map C clear
 map R reload
+map <esc> quit
 map <enter> open
 map mf mkfile
 map md mkdir
+map mm mark-save
 map au unarchive
 map af select-files
 map ad select-dirs
@@ -87,7 +92,7 @@ map gpn cd ~/pnotes
 map gte cd ~/temp
 map gtr cd ~/.Trash
 map gwdl cd /mnt/c/Users/brian.gildea/Downloads
-map gwdt cd /mnt/c/Users/brian.gildea/OneDrive - LeadVenture/Desktop
+map gwdt cd /mnt/c/Users/brian.gildea/OneDrive\ -\ LeadVenture/Desktop
 
 
 
