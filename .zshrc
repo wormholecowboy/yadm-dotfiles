@@ -44,6 +44,7 @@ eval "$(starship init zsh)"
 export PATH="$PATH:/opt/stylua"
 export PATH="$PATH:/usr/local/lf"
 export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/home/brian/bin"
 
 
 # FZF configuration
@@ -98,6 +99,8 @@ alias grep="grep --color=auto"
 alias s2l="saml2aws login"
 alias s2s="saml2aws script"
 alias tfa="terraform apply"
+alias tfi="terraform init"
+alias tfv="terraform -v"
 
 
 
