@@ -24,12 +24,12 @@ discharging_symbol = "💀 "
 threshold = 20 
 style = "bold red"
 
-# Clear visibility for exit codes
-[status]
-style = "bg:red"
-symbol = "💣 "
-format = '[\[$symbol$status\]]($style) '
-disabled = false
+# # Clear visibility for exit codes
+# [status]
+# style = "bg:red"
+# symbol = "💣 "
+# format = '[\[$symbol$status\]]($style) '
+# disabled = false
 
 [directory]
 style = "fg:#FFA825"

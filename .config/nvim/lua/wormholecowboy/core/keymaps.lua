@@ -1,7 +1,15 @@
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
+
 local keymap = vim.keymap.set
 local opts = { silent = true }
 
--- add function: kill cmp, set wrap with not word breakage, turn off line hl, turn off line numbers, turn off line numbers
+-- add function: kill cmp, set wrap with not word breakage, turn off line hl, turn off line numbers
 -- or maybe an autocommand that hooks into when a txt file or md file is opened
 
 vim.g.mapleader = " "
@@ -59,32 +67,24 @@ keymap("n", "s", [["_s]])
 keymap("n", "c", [["_c]])
 
 function removeReturnCharacters()
-	vim.cmd("%s/\r$//")
+  vim.cmd("%s/\r$//")
 end
 
-keymap("n", "<leader>uz", "<cmd>edit $HOME/.zshrc<cr>", opts)
-keymap("n", "<leader>uv", "<cmd>edit $HOME/.config/nvim/<cr>", opts)
-keymap("n", "<leader>up", "<cmd>edit $HOME/pnotes<cr>", opts)
-keymap("n", "<leader>uc", ":lua vim.lsp.buf.code_action()<CR>", opts) --select all
-keymap("n", "<leader>uw", "`[v`]:lua removeReturnCharacters()<cr>", opts)
+keymap("n", "<leader>uz", "<cmd>edit $HOME/.zshrc<cr>", opts) --edit zsh
+keymap("n", "<leader>uv", "<cmd>edit $HOME/.config/nvim/<cr>", opts) --edit neovim
+keymap("n", "<leader>up", "<cmd>edit $HOME/pnotes<cr>", opts) --prog notes
+keymap("n", "<leader>uc", ":lua vim.lsp.buf.code_action()<CR>", opts) --code action
+keymap("n", "<leader>uw", "`[v`]:lua removeReturnCharacters()<cr>", opts) --remove windows return carriage
 
-keymap("n", "<leader>w", ":w<cr>", opts)
-keymap("n", "<leader>c", ":bd<cr>", opts)
+keymap("n", "<leader>w", ":w<cr>", opts) --save
+keymap("n", "<leader>c", ":bd<cr>", opts) --close
 keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
-keymap("n", "gp", "`[v`]", opts)
-keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false }<cr>", opts)
-keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+keymap("n", "gp", "`[v`]", opts) --select last paste
+keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false }<cr>", opts) --quiet
+-- keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])  --dumb rename
 
 keymap("n", "<leader>o", "o<Esc>k", opts)
 keymap("n", "<leader>O", "O<Esc>j", opts)
-
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
 
 -- Normal --
 -- Better window navigation
