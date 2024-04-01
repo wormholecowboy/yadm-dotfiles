@@ -17,8 +17,6 @@ return {
   config = function()
     local lsp = require("lsp-zero").preset({})
     local cmp = require("cmp")
-    -- local cmp_action = require("lsp-zero").cmp_action()
-    -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     lsp.on_attach(function(client, bufnr)
       -- see :help lsp-zero-keybindings
@@ -54,11 +52,23 @@ return {
       "eslint-lsp",
     })
 
-    --[[ local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
 			local hl = "DiagnosticSign" .. type
-			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-		end ]]
+			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+		end
+
+    local wk = require("which-key")
+    wk.register({
+      g = {
+        d = { "<cmd>Telescope lsp_definitions<cr>", "definition" },
+        r = { "<cmd>Telescope lsp_references<cr>", "references" },
+        D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "declaration" },
+        i = { "<cmd>Telescope lsp_implementations<cr>", "implementation" },
+      },
+        K = { "<cmd>vim.lsp.buf.hover<cr>", "implementation" },
+    }, { prefix = "<leader>" })
+
 
     require("luasnip.loaders.from_vscode").lazy_load()
     require("luasnip").filetype_extend("javascript", { "javascriptreact" })
