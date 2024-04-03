@@ -38,6 +38,7 @@ vim.g.mapleader = " "
 --      m: add all modified -u
 --      p: push
 --      v: Gvdiffsplit!
+--      w: worktree
 -- h and t: git hunks
 --      check git signs for keymaps
 -- q: kill cmp
