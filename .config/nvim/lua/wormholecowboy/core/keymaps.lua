@@ -50,6 +50,7 @@ vim.g.mapleader = " "
 --      f: format
 --      n: notes
 --      p: prog notes
+--      t: twilight
 --      v: edit vim config
 --      w: format wsl paste
 --      z: edit zsh
