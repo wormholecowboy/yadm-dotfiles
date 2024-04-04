@@ -64,6 +64,7 @@ alias gst="git status"
 alias gl="git log"
 alias glg="git log --oneline --decorate --graph --all"
 alias glo="git log --oneline"
+alias gw="git worktree"
 
 alias nrd="npm run dev"
 alias nv='nvim'
