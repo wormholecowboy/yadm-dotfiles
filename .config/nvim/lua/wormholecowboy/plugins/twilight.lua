@@ -1,5 +1,6 @@
 return {
   "folke/twilight.nvim",
+  event = { "BufReadPre", "BufNewFile" },
   opts = {
     {
       dimming = {
@@ -22,7 +23,7 @@ return {
       exclude = {}, -- exclude these filetypes
     },
   },
-  config = function ()
+  config = function()
     vim.keymap.set("n", "<leader>ut", "<cmd>Twilight<cr>", {})
-  end
+  end,
 }
