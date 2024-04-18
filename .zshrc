@@ -79,6 +79,7 @@ alias ls="exa -lha --icons --group-directories-first"
 alias ll="exa -lha --color=always --group-directories-first | less -r"
 alias lt="exa -l --icons --tree"
 alias lsn="exa -lh --icons --group-directories-first"
+alias rmdir="rm -rf"
 
 alias evim="yadm enter nvim $HOME/.config/nvim"
 alias ezsh="yadm enter nvim $HOME/.zshrc"
