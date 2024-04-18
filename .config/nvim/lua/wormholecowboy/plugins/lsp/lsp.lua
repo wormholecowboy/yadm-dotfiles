@@ -11,6 +11,14 @@ return {
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local keymap = vim.keymap
 
+    vim.diagnostic.config({
+      virtual_text = false,
+      signs = true,
+      underline = true,
+      update_in_insert = false,
+      severity_sort = false,
+    })
+
     local opts = { noremap = true, silent = true }
     local on_attach = function(_, bufnr)
       opts.buffer = bufnr
@@ -95,20 +103,10 @@ return {
       on_attach = on_attach,
     })
 
-    -- configure svelte server
-    lspconfig["svelte"].setup({
+    lspconfig["terraformls"].setup({
       capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-        vim.api.nvim_create_autocmd("BufWritePost", {
-          pattern = { "*.js", "*.ts" },
-          callback = function(ctx)
-            if client.name == "svelte" then
-              client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-            end
-          end,
-        })
-      end,
+      on_attach = on_attach,
+      filetypes = { "terraform", "terraform-vars" },
     })
 
     -- configure prisma orm server

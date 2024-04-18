@@ -53,12 +53,13 @@ vim.g.mapleader = " "
 --      t: twilight
 --      v: edit vim config
 --      w: format wsl paste
+--      x: close split buffer
 --      z: edit zsh
 -- U: Undotree
 -- w: write
 -- z: zen mode
 
-keymap("i", "kj", "<ESC>", opts)
+-- keymap("i", "kj", "<ESC>", opts)
 vim.api.nvim_set_keymap("n", "QQ", ":q!<enter>", { noremap = false })
 
 keymap("n", "Q", "<nop>")
@@ -77,6 +78,7 @@ keymap("n", "<leader>uv", "<cmd>edit $HOME/.config/nvim/<cr>", opts) --edit neov
 keymap("n", "<leader>up", "<cmd>edit $HOME/pnotes<cr>", opts) --prog notes
 keymap("n", "<leader>uc", ":lua vim.lsp.buf.code_action()<CR>", opts) --code action
 keymap("n", "<leader>uw", "`[v`]:lua removeReturnCharacters()<cr>", opts) --remove windows return carriage
+keymap("n", "<leader>ux", "<cmd>bp|bd #<cr>", opts) --split buf delete
 
 keymap("n", "<leader>w", ":w<cr>", opts) --save
 keymap("n", "<leader>c", ":bd<cr>", opts) --close
