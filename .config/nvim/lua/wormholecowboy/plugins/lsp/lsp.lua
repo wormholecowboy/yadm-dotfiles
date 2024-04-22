@@ -109,6 +109,12 @@ return {
       filetypes = { "terraform", "terraform-vars" },
     })
 
+    lspconfig["tflint"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      filetypes = { "terraform", "terraform-vars" },
+    })
+
     -- configure prisma orm server
     lspconfig["prismals"].setup({
       capabilities = capabilities,
