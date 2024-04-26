@@ -19,7 +19,6 @@ return {
 
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
-    -- luasnip.filetype_extend("javascript", { "javascriptreact" })
 
     local check_backspace = function() -- from chris@machine (needed for supertab)
       local line, col = unpack(vim.api.nvim_win_get_cursor(0))
