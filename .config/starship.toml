@@ -65,3 +65,13 @@ format = "[$user]($style): "
 
 [aws]
 symbol = "  "
+expiration_symbol = " "
+
+[terraform]
+format = '[🏎💨 $version$workspace]($style) '
+
+[time]
+disabled = false
+format = '🕙[ $time ]($style) '
+time_format = '%I:%M'
+utc_time_offset = '-4'
