@@ -71,7 +71,7 @@ expiration_symbol = " "
 format = '[🏎💨 $version$workspace]($style) '
 
 [time]
-disabled = false
+disabled = true
 format = '🕙[ $time ]($style) '
 time_format = '%I:%M'
 utc_time_offset = '-4'

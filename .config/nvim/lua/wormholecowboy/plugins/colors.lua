@@ -6,7 +6,6 @@ return {
 		"lifepillar/vim-solarized8",
 		"neanias/everforest-nvim",
 		"morhetz/gruvbox",
-		"rose-pine/neovim",
 		"EdenEast/nightfox.nvim",
 		"kvrohit/mellow.nvim",
 		"talha-akram/noctis.nvim",
