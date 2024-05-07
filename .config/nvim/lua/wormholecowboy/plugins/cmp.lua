@@ -43,7 +43,7 @@ return {
           scrolloff = 8,
         },
         documentation = {
-          border = "rounded",
+          -- border = "none",
           winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,Search:None",
         },
       },

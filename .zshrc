@@ -103,7 +103,7 @@ alias specs="inxi -Fxxxc0z"
 alias grep="grep --color=auto"
 
 alias s2l="saml2aws login"
-alias s2s="saml2aws script"
+alias s2s="saml2aws script | head -n 3"
 alias tfa="terraform apply"
 alias tfi="terraform init"
 alias tfv="terraform -v"
@@ -118,3 +118,6 @@ alias tfv="terraform -v"
 
 
 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
