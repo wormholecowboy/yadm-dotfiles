@@ -6,7 +6,7 @@ return {
     bufferline.setup({
 
       options = {
-        separator_style = "slant",
+        -- separator_style = "slant",
         show_close_icon = true,
         sort_by = "insert_after_current",
         offsets = {
@@ -17,16 +17,17 @@ return {
             separator = true,
           },
         },
-        buffer_close_icon = "",
-        -- highlights need to be changed
-        highlights = {
-          fill = {
-            bg = {
-              attribute = "fg",
-              highlight = "Pmenu",
-            },
-          },
+        indicator = {
+            icon = '',
+            style = 'icon'
         },
+        style_preset = bufferline.style_preset.minimal,
+        buffer_close_icon = "",
+        -- highlights = {
+        --   tab_selected = {
+        --     fg = '#aaa',
+        --     bg = '#000',
+        -- },
         -- mode = "buffers", -- set to "tabs" to only show tabpages instead
         -- style_preset = bufferline.style_preset.default, -- or bufferline.style_preset.minimal,
         -- themable = true | false, -- allows highlight groups to be overriden i.e. sets highlights as default
