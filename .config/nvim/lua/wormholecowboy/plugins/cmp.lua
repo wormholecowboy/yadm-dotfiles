@@ -4,22 +4,24 @@ return {
   dependencies = {
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
-    "rafamadriz/friendly-snippets",
-    { "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
-    "saadparwaiz1/cmp_luasnip",
+    "hrsh7th/cmp-cmdline",
+    "L3MON4D3/LuaSnip",
     "onsails/lspkind.nvim",
-    -- "hrsh7th/cmp-cmdline",
     { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
   },
   config = function()
     local cmp = require("cmp")
-    local luasnip = require("luasnip")
     local lspkind = require("lspkind")
+    lspkind.init {}
     local tailwind_formatter = require("tailwindcss-colorizer-cmp").formatter
 
-    -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
+    -- get luasnip loading logs
     -- require("luasnip").log.set_loglevel("info")
-    require("luasnip.loaders.from_vscode").lazy_load()
+    -- :lua require("luasnip").log.open()
+
+    require("cmp").config.formatting = {
+      format = require("tailwindcss-colorizer-cmp").formatter,
+    }
 
     cmp.setup({
       snippet = {
@@ -29,8 +31,7 @@ return {
       },
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
-        { name = "luasnip", option = { use_show_condition = false } },
-        -- { name = "luasnip" },
+        { name = "luasnip" },
         { name = "buffer", keyword_length = 3 },
         { name = "path" },
       }),
@@ -61,22 +62,22 @@ return {
           { "i", "c" }
         ),
       },
-      -- formatting = {
-      --   format = lspkind.cmp_format({
-      --     maxwidth = 50,
-      --     ellipsis_char = "...",
-      --     menu = {
-      --       nvim_lsp = "lsp",
-      --       nvim_lua = "lua",
-      --       path = "path",
-      --       buffer = "buf",
-      --       luasnip = "snip",
-      --       treesitter = "",
-      --       zsh = "",
-      --     },
-      --     before = tailwind_formatter,
-      --   }),
-      -- },
+      formatting = {
+        format = lspkind.cmp_format({
+          maxwidth = 50,
+          ellipsis_char = "...",
+          menu = {
+            nvim_lsp = "lsp",
+            nvim_lua = "lua",
+            path = "path",
+            buffer = "buf",
+            luasnip = "snip",
+            treesitter = "",
+            zsh = "",
+          },
+          before = tailwind_formatter,
+        }),
+      },
     })
   end,
 }
