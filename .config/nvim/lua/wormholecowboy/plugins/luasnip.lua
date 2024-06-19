@@ -11,6 +11,12 @@ return {
 
     local ls = require("luasnip")
 
+    -- kill jump points after exiting snippet
+    ls.config.set_config({
+      region_check_events = "InsertEnter",
+      delete_check_events = "InsertLeave",
+    })
+
     -- vim.keymap.set({ "i" }, "<C-K>", function()
     --   ls.expand()
     -- end, { silent = true })
