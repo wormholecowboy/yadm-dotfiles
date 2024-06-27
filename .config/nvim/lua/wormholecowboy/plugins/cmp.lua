@@ -12,7 +12,7 @@ return {
   config = function()
     local cmp = require("cmp")
     local lspkind = require("lspkind")
-    lspkind.init {}
+    lspkind.init({})
     local tailwind_formatter = require("tailwindcss-colorizer-cmp").formatter
 
     -- get luasnip loading logs
@@ -34,6 +34,7 @@ return {
         { name = "luasnip" },
         { name = "buffer", keyword_length = 3 },
         { name = "path" },
+        { name = "codeium" },
       }),
       completion = {
         completeopt = "menu,menuone,preview,noinsert",
@@ -74,6 +75,7 @@ return {
             luasnip = "snip",
             treesitter = "",
             zsh = "",
+            codieum= "󰚩"
           },
           before = tailwind_formatter,
         }),
