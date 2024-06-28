@@ -103,7 +103,7 @@ alias specs="inxi -Fxxxc0z"
 alias grep="grep --color=auto"
 
 alias s2l="saml2aws login"
-alias s2s="saml2aws script | head -n 3"
+alias s2s="source ~/scripts/export-aws-creds.sh"
 alias tfa="terraform apply"
 alias tfi="terraform init"
 alias tfv="terraform -v"
