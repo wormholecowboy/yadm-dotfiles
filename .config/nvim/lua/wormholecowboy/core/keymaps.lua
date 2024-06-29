@@ -58,8 +58,8 @@ vim.g.mapleader = " "
 -- U: Undotree
 -- w: write
 -- z: zen mode
-
--- keymap("i", "kj", "<ESC>", opts)
+--
+keymap({"i", "v"}, "kj", "<ESC>", opts)
 vim.api.nvim_set_keymap("n", "QQ", ":q!<enter>", { noremap = false })
 
 keymap("n", "Q", "<nop>")

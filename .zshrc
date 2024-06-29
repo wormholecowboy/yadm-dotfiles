@@ -73,7 +73,7 @@ alias nv='nvim'
 
 alias py='python3'
 alias lf='lfcd'
-alias cat="batcat"
+alias cat="bat"
 alias cl="clear"
 
 alias ls="exa -lha --icons --group-directories-first"
