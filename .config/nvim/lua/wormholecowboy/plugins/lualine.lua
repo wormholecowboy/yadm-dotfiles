@@ -6,8 +6,8 @@ return {
       options = {
         icons_enabled = true,
         theme = "codedark",
-        component_separators = { left = "", right = "" },
-        section_separators = { left = "", right = "" },
+        component_separators = { left = "|", right = "|" },
+        section_separators = { left = "", right = "" },
         disabled_filetypes = {
           statusline = {},
           winbar = {},
@@ -25,12 +25,13 @@ return {
         lualine_a = { "mode" },
         lualine_b = { "branch", "diff", "diagnostics" },
         lualine_c = {
-          "buffers",
-          -- buffers_color = {
-          --   -- Same values as the general color option can be used here.
-          --   active = "#000", -- Color for active buffer.
-          --   inactive = "lualine_{section}_inactive", -- Color for inactive buffer.
-          -- },
+          {
+            "buffers",
+            buffers_color = {
+              -- active = { fg = '#ffaa88', bg = 'grey', gui='italic,bold' }
+              active = "Visual",
+            },
+          },
         },
         lualine_x = { "filetype" },
         lualine_y = { "progress" },
