@@ -9,9 +9,9 @@ fi
 
 # CHANGE DIR
 if [[ $(uname) == "Linux" ]]; then
-  alias cd='cd $(find . -type d | fzf --preview="batcat --color=always {}")'
+  alias cds='cd $(find . -type d | fzf --preview="batcat --color=always {}")'
 else
-  alias cd='cd $(find . -type d | fzf --preview="bat --color=always {}")'
+  alias cds='cd $(find . -type d | fzf --preview="bat --color=always {}")'
 fi
 # add the -m flag to select multiple files with the tab key
 
