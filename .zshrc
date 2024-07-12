@@ -49,7 +49,7 @@ export PATH="$PATH:/home/brian/bin"
 export FZF_DEFAULT_OPS="--extended"
 
 # ALIASES
-source ~/scripts/conditional-aliases.sh
+source ~/z-shell-aliases.sh
 
 # PYENV
 export PYENV_ROOT="$HOME/.pyenv"
