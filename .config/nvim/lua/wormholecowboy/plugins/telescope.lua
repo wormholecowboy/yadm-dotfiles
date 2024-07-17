@@ -50,8 +50,10 @@ return {
           i = {
             ["<Down>"] = actions.cycle_history_next,
             ["<Up>"] = actions.cycle_history_prev,
-            ["<C-j>"] = actions.move_selection_next,
-            ["<C-k>"] = actions.move_selection_previous,
+            ["<C-j>"] = actions.preview_scrolling_down,
+            ["<C-k>"] = actions.preview_scrolling_up,
+            ["<C-v>"] = actions.select_vertical,
+            ["<C-h>"] = actions.select_horizontal
           },
         },
       },
