@@ -36,7 +36,7 @@ alias glg="git log --oneline --decorate --graph --all"
 alias glo="git log --oneline"
 alias gw="git worktree"
 alias gwf="git fetch origin '*:*' --update-head-ok"
-alias gcb="git clone --bare"
+alias gcb="~/scripts/git-bare.sh"
 
 alias nrd="npm run dev"
 alias nv='nvim'
