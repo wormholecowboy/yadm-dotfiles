@@ -59,7 +59,13 @@ vim.g.mapleader = " "
 -- w: write
 -- z: zen mode
 --
-keymap({"i", "v"}, "kj", "<ESC>", opts)
+-- <leader>
+--    y: yank for icons
+--    i: insert icon in normal mode
+--<control key|
+--    e: insert icon in insert mode
+
+-- keymap("i", "kj", "<ESC>", opts)
 vim.api.nvim_set_keymap("n", "QQ", ":q!<enter>", { noremap = false })
 
 keymap("n", "Q", "<nop>")
