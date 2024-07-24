@@ -69,6 +69,7 @@ vim.g.mapleader = " "
 vim.api.nvim_set_keymap("n", "QQ", ":q!<enter>", { noremap = false })
 
 keymap("n", "Q", "<nop>")
+keymap("n", "<C-z>", "<nop>")
 keymap("x", "p", [["_dP]]) -- better paste
 keymap("n", "r", [["_r]])
 keymap("n", "x", [["_x]])

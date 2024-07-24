@@ -1,6 +1,5 @@
 return {
     "tpope/vim-surround",
-    "windwp/nvim-ts-autotag",
     "rafamadriz/friendly-snippets",
     {
         "L3MON4D3/LuaSnip",
