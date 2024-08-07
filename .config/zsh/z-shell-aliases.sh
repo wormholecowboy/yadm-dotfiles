@@ -1,26 +1,13 @@
 
-# NEOVIM
-if [[ $(uname) == "Linux" ]]; then
-  alias nvs='nvim $(fzf --preview="batcat --color=always {}")'
-else
-  alias nvs='nvim $(fzf --preview="bat --color=always {}")'
-fi
-# add the -m flag to select multiple files with the tab key
-
-# CHANGE DIR
-if [[ $(uname) == "Linux" ]]; then
-  alias cds='cd $(find . -type d | fzf --preview="batcat --color=always {}")'
-else
-  alias cds='cd $(find . -type d | fzf --preview="bat --color=always {}")'
-fi
-# add the -m flag to select multiple files with the tab key
-
 # CAT
 if [[ $(uname) == "Linux" ]]; then
   alias cat="batcat"
+  bat_command="batcat"
 else 
   alias cat="bat"
+  bat_command="bat"
 fi
+alias nvs='nvim $(fzf -m --preview="$bat_command --color=always {}")' # tab for multi select
 
 
 alias ga="git add -A"
@@ -40,10 +27,10 @@ alias gcb="~/scripts/git-bare.sh"
 
 alias nrd="npm run dev"
 alias nv='nvim'
-
 alias py='python3'
 alias lf='lfcd'
 alias cl="clear"
+alias cds='cd $(find . -type d | fzf)'
 
 alias ls="exa -lha --icons --group-directories-first"
 alias ll="exa -lha --color=always --group-directories-first | less -r"
