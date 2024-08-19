@@ -8,7 +8,7 @@ else
   bat_command="bat"
 fi
 alias nvs='nvim $(fzf -m --preview="$bat_command --color=always {}")' # tab for multi select
-
+alias cds="find . -type d | fzf"
 
 alias ga="git add -A"
 alias gb="git branch -a"
@@ -30,7 +30,6 @@ alias nv='nvim'
 alias py='python3'
 alias lf='lfcd'
 alias cl="clear"
-alias cds='cd $(find . -type d | fzf)'
 
 alias ls="exa -lha --icons --group-directories-first"
 alias ll="exa -lha --color=always --group-directories-first | less -r"
