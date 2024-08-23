@@ -8,7 +8,7 @@ else
   bat_command="bat"
 fi
 alias nvs='nvim $(fzf -m --preview="$bat_command --color=always {}")' # tab for multi select
-alias cds="find . -type d | fzf"
+alias cds='cd $(find . -type d | fzf)'
 
 alias ga="git add -A"
 alias gb="git branch -a"
