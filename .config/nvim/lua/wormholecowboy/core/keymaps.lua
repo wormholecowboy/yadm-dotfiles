@@ -28,7 +28,9 @@ vim.g.mapleader = " "
 --  LEADER: my current leader remaps legend
 -- o&O: add lines
 -- a: copy all
--- c: close buffer
+-- c: 
+--    b: close buffer 
+--    s: close split buffer
 -- d: debug
 -- D: diagnostic
 -- f: hop
@@ -88,7 +90,8 @@ keymap("n", "<leader>uw", "`[v`]:lua removeReturnCharacters()<cr>", opts) --remo
 keymap("n", "<leader>ux", "<cmd>bp|bd #<cr>", opts) --split buf delete
 
 keymap("n", "<leader>w", ":w<cr>", opts) --save
-keymap("n", "<leader>c", ":bd<cr>", opts) --close
+keymap("n", "<leader>cb", ":bd<cr>", opts) --close buffer
+keymap("n", "<leader>cs", ":bp|bd#<cr>", opts) --close split buffer
 keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
 keymap("n", "gp", "`[v`]", opts) --select last paste
 keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false }<cr>", opts) --quiet
