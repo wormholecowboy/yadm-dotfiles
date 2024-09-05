@@ -5,6 +5,10 @@ set icons true
 set relativenumber
 set drawbox
 
+# Syntax Highlighting
+set previewer ~/scripts/source-highlight/src-hilite-lesspipe.sh
+map i $~/scripts/source-highlight/src-hilite-lesspipe.sh $f | less -R
+
 # Custom Functions
 
 cmd move-parent &{{

@@ -3,6 +3,10 @@
 export EDITOR=nvim
 export XDG_CONFIG_HOME=~/.config
 
+# LF highlighting
+# export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+# export LESS=' -R '
+
 # Key Bindings
 # bindkey -e  # emacs
 
@@ -52,6 +56,7 @@ export PATH="$PATH:/opt/stylua"
 export PATH="$PATH:/usr/local/lf"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/home/brian/bin"
+
 
 
 # PYENV
