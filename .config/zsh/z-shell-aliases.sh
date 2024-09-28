@@ -31,10 +31,10 @@ alias py='python3'
 alias lf='lfcd'
 alias cl="clear"
 
-alias ls="exa -lha --icons --group-directories-first"
-alias ll="exa -lha --color=always --group-directories-first | less -r"
-alias lt="exa -l --icons --tree"
-alias lsn="exa -lh --icons --group-directories-first"
+alias ls="lsd -lha  --group-directories-first"
+alias ll="lsd -lha --color=always --group-directories-first | less -r"
+alias lt="lsd -l  --tree"
+alias lsn="lsd -lh  --group-directories-first"
 alias rmdir="rm -rf"
 
 alias evim="yadm enter nvim $HOME/.config/nvim"
