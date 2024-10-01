@@ -56,6 +56,7 @@ export PATH="$PATH:/opt/stylua"
 export PATH="$PATH:/usr/local/lf"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/home/brian/bin"
+export PATH="$PATH:/snap/bin"
 
 
 
