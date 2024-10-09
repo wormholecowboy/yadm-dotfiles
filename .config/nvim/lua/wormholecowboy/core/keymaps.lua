@@ -22,7 +22,14 @@ vim.g.mapleader = " "
 --      gr: ref
 --      gs: signature
 --      gl: show diagnostic
---      gp: select last paste
+--      gP: select last paste
+--      gp: goto-preview
+--        d: def
+--        i: impplemtation
+--        D: declare
+--        t: type
+--        r: references
+--        c: close all
 --      gb and gc : comment.nvim
 --
 --  LEADER: my current leader remaps legend
@@ -90,7 +97,7 @@ keymap("n", "<leader>ux", "<cmd>bp|bd #<cr>", opts) --split buf delete
 keymap("n", "<leader>w", ":w<cr>", opts) --save
 keymap("n", "<leader>c", ":bp|bd#<cr>", opts) --close split buffer
 keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
-keymap("n", "gp", "`[v`]", opts) --select last paste
+keymap("n", "gP", "`[v`]", opts) --select last paste
 keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false }<cr>", opts) --quiet
 -- keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])  --dumb rename
 
