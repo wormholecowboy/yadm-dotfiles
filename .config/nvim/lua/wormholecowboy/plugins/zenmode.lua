@@ -1,6 +1,5 @@
 return {
   "folke/zen-mode.nvim",
-  keys = "<leader>z",
   config = function()
     local opts = { silent = true }
     local keymap = vim.keymap.set
