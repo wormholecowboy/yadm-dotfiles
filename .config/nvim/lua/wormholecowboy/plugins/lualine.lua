@@ -24,15 +24,15 @@ return {
       sections = {
         lualine_a = { "mode" },
         lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = {
-          {
-            "buffers",
-            buffers_color = {
-              -- active = { fg = '#ffaa88', bg = 'grey', gui='italic,bold' }
-              active = "Visual",
-            },
-          },
-        },
+        -- lualine_c = {
+        --   {
+        --     "buffers",
+        --     buffers_color = {
+        --       -- active = { fg = '#ffaa88', bg = 'grey', gui='italic,bold' }
+        --       active = "Visual",
+        --     },
+        --   },
+        -- },
         lualine_x = { "filetype" },
         lualine_y = { "progress" },
         lualine_z = { "location" },

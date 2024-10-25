@@ -14,6 +14,11 @@ local opts = { silent = true }
 
 vim.g.mapleader = " "
 
+-- []:
+--    d: diagnostics
+--    c: git changes
+--    b: buffer moving
+--
 -- g: lsp
 --      gd: def
 --      gD: declaration
