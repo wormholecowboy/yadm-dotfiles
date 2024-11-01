@@ -39,7 +39,6 @@ vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboar
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.pumheight = 10 -- pop up menu height
--- vim.opt.smartindent = true -- make indenting smarter again
 
 vim.opt.splitbelow = true -- force all horizontal splits to go below current window
 vim.opt.splitright = true -- force all vertical splits to go to the right of current window
@@ -54,6 +53,8 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.expandtab = true -- convert tabs to spaces
+vim.opt.smarttab = true
+vim.opt.autoindent = true
 vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
 vim.opt.tabstop = 2 -- insert spaces for a tab
 vim.opt.softtabstop = 2
