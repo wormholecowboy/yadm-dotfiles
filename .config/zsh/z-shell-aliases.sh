@@ -21,6 +21,9 @@ alias gst="git status"
 alias gl="git log"
 alias glg="git log --oneline --decorate --graph --all"
 alias glo="git log --oneline"
+gls() {
+  git log --oneline --grep="$1"
+}
 alias gw="git worktree"
 alias gwf="git fetch origin '*:*' --update-head-ok"
 alias gcb="~/scripts/git-bare.sh"
