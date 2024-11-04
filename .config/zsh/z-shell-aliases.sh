@@ -25,7 +25,7 @@ gls() {
   git log --oneline --grep="$1"
 }
 alias gw="git worktree"
-alias gwf="git fetch origin '*:*' --update-head-ok"
+# alias gwf="git fetch origin '*:*' --update-head-ok"
 alias gcb="~/scripts/git-bare.sh"
 
 alias nrd="npm run dev"
