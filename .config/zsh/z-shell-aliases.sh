@@ -35,7 +35,7 @@ alias lf='lfcd'
 alias cl="clear"
 
 alias ls="lsd -lha --group-dirs=first"
-alias ll="lsd -lha --color --group-dirs=first | less -r"
+alias ll="lsd -lha --color=always --group-dirs=first | less -r"
 alias lt="lsd -l  --tree"
 alias lsn="lsd -lh  --group-dirs=first"
 alias rmdir="rm -rf"
