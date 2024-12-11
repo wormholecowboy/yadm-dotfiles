@@ -8,7 +8,7 @@ return {
 
 		local keymap = vim.keymap.set
 
-		keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
+		-- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
 
 		local function my_on_attach(bufnr)
 			local api = require("nvim-tree.api")
