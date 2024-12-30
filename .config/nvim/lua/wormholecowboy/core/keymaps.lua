@@ -59,6 +59,7 @@ vim.g.mapleader = " "
 -- t: git hunks?
 -- u: user
 --      c: code actions
+--      d: Noice dismiss
 --      f: format
 --      n: notes
 --      p: prog notes

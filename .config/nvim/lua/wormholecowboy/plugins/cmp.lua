@@ -23,6 +23,8 @@ return {
       format = require("tailwindcss-colorizer-cmp").formatter,
     }
 
+    require("cmp-npm").setup({})
+
     cmp.setup({
       snippet = {
         expand = function(args)
@@ -33,6 +35,7 @@ return {
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "buffer", keyword_length = 3 },
+        { name = "npm", keyword_length = 4 },
         { name = "path" },
         { name = "codeium" },
       }),
@@ -75,7 +78,7 @@ return {
             luasnip = "snip",
             treesitter = "",
             zsh = "",
-            codieum= "󰚩"
+            codieum = "󰚩",
           },
           before = tailwind_formatter,
         }),

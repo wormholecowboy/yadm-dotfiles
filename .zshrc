@@ -47,7 +47,7 @@ setopt pushdminus
 . ~/.config/zsh/vi-mode/zsh-vi-mode.plugin.zsh
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-. ~/.config/zsh/z-shell-aliases.sh
+. ~/.config/zsh/aliases.sh
 . ~/.config/zsh/syntax-hl/zsh-syntax-highlighting.zsh
 
 

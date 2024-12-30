@@ -208,16 +208,17 @@ return {
   -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
   config = function(_, opts)
     local oil = require("oil")
+    -- vim.keymap.set("n", "<leader>e", ":Oil<cr>", {})
     oil.setup(opts)
 
     local openState = false
     vim.keymap.set("n", "<leader>e", function()
-      openState = not openState
-      if openState then
-        oil.open()
-      else
-        oil.close()
-      end
+      -- openState = not openState
+      -- if openState then
+      oil.open()
+      -- else
+      -- oil.close()
+      -- end
     end, { desc = "Toggle Oil" })
   end,
 }

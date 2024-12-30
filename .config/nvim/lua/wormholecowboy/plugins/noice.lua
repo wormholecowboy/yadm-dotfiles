@@ -27,4 +27,7 @@ return {
     --   If not available, we use `mini` as the fallback
     "rcarriga/nvim-notify",
   },
+  config = function ()
+    vim.keymap.set("n", "<leader>ud", ":Noice dismiss<cr>", {})
+  end
 }
