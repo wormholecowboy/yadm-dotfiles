@@ -12,7 +12,7 @@ return {
 	},
 	config = function()
 		function ColorMyPencils(color)
-			color = color or "noctis"
+			color = color or "noctis_azureus"
 			vim.cmd.colorscheme(color)
 
 			-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -22,8 +22,8 @@ return {
 		ColorMyPencils()
 
 		require("everforest").setup({
-			background = "soft",
-			transparent_background_level = 50,
+			-- background = "soft",
+			-- transparent_background_level = 50,
 			italics = true,
 			disable_italic_comments = false,
 			---The contrast of line numbers, indent lines, etc. Options are `"high"` or
