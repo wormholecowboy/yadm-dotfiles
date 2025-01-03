@@ -1,18 +1,22 @@
 return {
 	"martinsione/darkplus.nvim",
 	dependencies = {
-		"folke/tokyonight.nvim",
-		"dracula/vim",
-		"lifepillar/vim-solarized8",
 		"neanias/everforest-nvim",
 		"morhetz/gruvbox",
 		"EdenEast/nightfox.nvim",
 		"kvrohit/mellow.nvim",
 		"talha-akram/noctis.nvim",
+    "whatyouhide/vim-gotham",
+    "toupeira/vim-desertink",
+    "tomasr/molokai",
+    "ayu-theme/ayu-vim",
+    "AlessandroYorba/Alduin",
+    "chase/focuspoint-vim",
+    "yorickpeterse/happy_hacking.vim"
 	},
 	config = function()
 		function ColorMyPencils(color)
-			color = color or "noctis_azureus"
+			color = color or "focuspoint"
 			vim.cmd.colorscheme(color)
 
 			-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
