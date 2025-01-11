@@ -85,3 +85,7 @@ vim.opt.updatetime = 50
 
 vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
 vim.opt.grepformat = "%f:%l:%c:%m"
+
+-- for avante
+-- views can only be fully collapsed with the global statusline
+vim.opt.laststatus = 3

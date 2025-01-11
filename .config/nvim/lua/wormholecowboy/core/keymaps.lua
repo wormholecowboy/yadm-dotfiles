@@ -39,7 +39,10 @@ vim.g.mapleader = " "
 --
 --  LEADER: my current leader remaps legend
 -- o&O: add lines
--- a: copy all
+-- A: copy all
+-- a: ai
+--    a: see avente settings
+--    e:
 -- c: close
 -- d: debug
 -- D: diagnostic
@@ -102,7 +105,7 @@ keymap("n", "<leader>ux", "<cmd>bp|bd #<cr>", opts) --split buf delete
 
 keymap("n", "<leader>w", ":w<cr>", opts) --save
 keymap("n", "<leader>c", ":bp|bd#<cr>", opts) --close split buffer
-keymap("n", "<leader>a", ":%y+<cr>", opts) --select all
+keymap("n", "<leader>A", ":%y+<cr>", opts) --select all
 keymap("n", "gP", "`[v`]", opts) --select last paste
 -- keymap("n", "<leader>q", "<cmd>lua require('cmp').setup.buffer { enabled = false }<cr>", opts) --quiet
 -- keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])  --dumb rename
