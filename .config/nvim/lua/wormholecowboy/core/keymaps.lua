@@ -61,6 +61,7 @@ vim.g.mapleader = " "
 -- s: search files, git, string, help
 -- t: git hunks?
 -- u: user
+--      b: buffer path
 --      c: code actions
 --      d: Noice dismiss
 --      f: format
