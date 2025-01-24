@@ -21,6 +21,7 @@ return {
       lazy_load = true,
       close_on_select = true,
       autojump = true,
+      default_direction = "prefer_left",
       highlight_on_hover = true,
       -- optionally use on_attach to set keymaps when aerial has attached to a buffer
       on_attach = function(bufnr)
