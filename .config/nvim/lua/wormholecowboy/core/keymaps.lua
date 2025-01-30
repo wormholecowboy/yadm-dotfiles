@@ -46,6 +46,7 @@ vim.g.mapleader = " "
 -- c: close
 -- d: debug
 -- D: diagnostic
+-- e: file tree
 -- f: hop
 -- gg: fugitive
 --      ,.: diffget
@@ -59,7 +60,7 @@ vim.g.mapleader = " "
 -- q: kill cmp
 -- r: rename
 -- s: search files, git, string, help
--- t: git hunks?
+-- t: aerial (tree)
 -- u: user
 --      b: buffer path
 --      c: code actions
