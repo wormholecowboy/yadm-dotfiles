@@ -57,6 +57,7 @@ vim.g.mapleader = " "
 --      w: worktree
 -- h and t: git hunks
 --      check git signs for keymaps
+-- m: markdown
 -- q: kill cmp
 -- r: rename
 -- s: search files, git, string, help
